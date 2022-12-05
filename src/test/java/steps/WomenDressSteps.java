@@ -16,9 +16,9 @@ public class WomenDressSteps {
 	
     @Given("the user is in the index page")
     public void theUserIsInTheIndexPage() {
-    	System.setProperty("WebDriver.gecko.driver", "../Drivers/geckodriver.exe");
+    	System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
     	driver = new ChromeDriver();
-    	driver.navigate().to("https://automationexercise.com");
+    	driver.get("https://automationexercise.com");
     }
 
     @When("the user clikcs the products option")
