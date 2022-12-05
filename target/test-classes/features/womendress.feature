@@ -1,8 +1,14 @@
 Feature: WomenDress
 
-Scenario: Show Women Dress
+Scenario Outline: Show Women Dress
 
 Given the user is in the index page
 When the user clikcs the products option
-And the user enters dress in the search bar
-Then the dress list appears
+And the user enters <article> in the search bar
+And the user clicks the search button
+Then the <article> list appears
+
+Examples:
+|article|
+|dress|
+|jeans|
