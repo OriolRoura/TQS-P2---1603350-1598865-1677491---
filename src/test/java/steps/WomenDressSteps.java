@@ -26,12 +26,12 @@ public class WomenDressSteps {
     	driver.findElement(By.partialLinkText("Products")).click();
     }
 
-    @And("the user enters dress in the search bar")
+    @When("^the user enters (.*) in the search bar")
     public void theUserEntersDressInTheSearchBar(String article) {
     	driver.findElement(By.id("search_product")).sendKeys(article);
-    }
+    }	
 
-    @And("the user clicks the search button")
+    @When("the user clicks the search button")
     public void theUserClicksTheSearchButt() {
     	driver.findElement(By.id("submit_search")).click();
     }
