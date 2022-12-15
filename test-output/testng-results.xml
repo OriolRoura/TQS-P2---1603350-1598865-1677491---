@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-14T09:49:00 CET" name="Default suite" finished-at="2022-12-14T09:49:40 CET" duration-ms="39773">
+  <suite started-at="2022-12-15T20:23:18 CET" name="Default suite" finished-at="2022-12-15T20:25:24 CET" duration-ms="125773">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaHotelTest@543295b0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-12-14T09:49:00 CET" name="Default test" finished-at="2022-12-14T09:49:40 CET" duration-ms="39773">
-      <class name="defaultPackage.reservaHotelTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:defaultPackage.reservaHotelTest@543295b0]" started-at="2022-12-14T09:49:00 CET" name="setUpClass" finished-at="2022-12-14T09:49:00 CET" duration-ms="189" status="PASS">
+    <test started-at="2022-12-15T20:23:18 CET" name="Default test" finished-at="2022-12-15T20:25:24 CET" duration-ms="125773">
+      <class name="defaultPackage.reservaTest">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:23:18 CET" name="setUpClass" finished-at="2022-12-15T20:23:18 CET" duration-ms="236" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@79518e00]]>
+                <![CDATA[org.testng.TestRunner@7186b202]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaHotelTest@543295b0]" started-at="2022-12-14T09:49:00 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-14T09:49:23 CET" duration-ms="22475" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:23:18 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-15T20:23:53 CET" duration-ms="34803" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,14 +30,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["reservaHotelSteps"]]>
+                <![CDATA["reservaSteps"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaHotelTest@543295b0]" started-at="2022-12-14T09:49:23 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-14T09:49:40 CET" duration-ms="17063" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:23:53 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-15T20:24:25 CET" duration-ms="32332" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,18 +46,50 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["reservaHotelSteps"]]>
+                <![CDATA["reservaSteps"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:defaultPackage.reservaHotelTest@543295b0]" started-at="2022-12-14T09:49:40 CET" name="tearDownClass" finished-at="2022-12-14T09:49:40 CET" duration-ms="5" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:24:25 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-15T20:24:57 CET" duration-ms="31609" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Reserve a fly"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["reservaSteps"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:24:57 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-15T20:25:24 CET" duration-ms="26667" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Reserve a tour"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["reservaSteps"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:25:24 CET" name="tearDownClass" finished-at="2022-12-15T20:25:24 CET" duration-ms="42" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- defaultPackage.reservaHotelTest -->
+      </class> <!-- defaultPackage.reservaTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
