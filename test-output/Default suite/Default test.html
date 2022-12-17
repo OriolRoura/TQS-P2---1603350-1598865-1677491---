@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Dec 16 13:22:43 CET 2022</td>
+<td>Started on:</td><td>Sat Dec 17 13:36:37 CET 2022</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18351 ms)</td>
+<tr><td>Total time:</td><td>80 seconds (80581 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,138 +76,65 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='defaultPackage.reservaTest.runScenario()'><b>runScenario</b><br>Test class: defaultPackage.reservaTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reserve a tour", "reservaSteps"</td>
-<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.125)
-Build info: version: &apos;4.5.3&apos;, revision: &apos;4b786a1e430&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9b1adbc64d1dd08534f6560d4711d736, get {url=https://phptravels.net/tours}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\ABELES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51583}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51583/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9b1adbc64d1dd08534f6560d4711d736
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at steps.reservaSteps.theUserIsInTheTourSelection(reservaSteps.java:176)
-	at ✽.the user is in the tour selection(file:///C:/Users/Abel%20Esteban%20Ferrer/Desktop/TQS-P2---1603350-1598865-1677491---/src/test/java/features/reserva.feature:42)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1372817363", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1372817363'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.125)
-Build info: version: &apos;4.5.3&apos;, revision: &apos;4b786a1e430&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9b1adbc64d1dd08534f6560d4711d736, get {url=https://phptravels.net/tours}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\ABELES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51583}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51583/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9b1adbc64d1dd08534f6560d4711d736
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at steps.reservaSteps.theUserIsInTheTourSelection(reservaSteps.java:176)
-	at ✽.the user is in the tour selection(file:///C:/Users/Abel%20Esteban%20Ferrer/Desktop/TQS-P2---1603350-1598865-1677491---/src/test/java/features/reserva.feature:42)
+<td title='defaultPackage.Pagaments.runScenario()'><b>runScenario</b><br>Test class: defaultPackage.Pagaments<br>Test method: Runs Cucumber Scenarios<br>Parameters: "payment of a flight", "pagaments"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at steps.pagamentsSteps.iValidateTheBookingInfo(pagamentsSteps.java:83)
+	at ✽.I validate the general info aaaa, bbbbbbbb, a@aaa, 11223, aaaaaa, Pay Later(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:29)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1388280822", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1388280822'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at steps.pagamentsSteps.iValidateTheBookingInfo(pagamentsSteps.java:83)
+	at ✽.I validate the general info aaaa, bbbbbbbb, a@aaa, 11223, aaaaaa, Pay Later(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:29)
 </pre></div></td>
-<td>4</td>
-<td>defaultPackage.reservaTest@6b2ea799</td></tr>
+<td>20</td>
+<td>defaultPackage.Pagaments@543295b0</td></tr>
 <tr>
-<td title='defaultPackage.reservaTest.runScenario()'><b>runScenario</b><br>Test class: defaultPackage.reservaTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reserve a fly", "reservaSteps"</td>
-<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.125)
-Build info: version: &apos;4.5.3&apos;, revision: &apos;4b786a1e430&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af15238139cfbc52bdcd8d126f2e1ef7, findElement {using=xpath, value=//*[@id=&quot;new-york&quot;]/div/div[2]/a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\ABELES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51561}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51561/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: af15238139cfbc52bdcd8d126f2e1ef7
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at steps.reservaSteps.theUsersSelectsTheFlightCompany(reservaSteps.java:121)
-	at ✽.the users selects the flight //*[@id=&quot;new-york&quot;]/div/div[2]/a(file:///C:/Users/Abel%20Esteban%20Ferrer/Desktop/TQS-P2---1603350-1598865-1677491---/src/test/java/features/reserva.feature:26)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1562452013", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1562452013'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=108.0.5359.125)
-Build info: version: &apos;4.5.3&apos;, revision: &apos;4b786a1e430&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [af15238139cfbc52bdcd8d126f2e1ef7, findElement {using=xpath, value=//*[@id=&quot;new-york&quot;]/div/div[2]/a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\ABELES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51561}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51561/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: af15238139cfbc52bdcd8d126f2e1ef7
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at steps.reservaSteps.theUsersSelectsTheFlightCompany(reservaSteps.java:121)
-	at ✽.the users selects the flight //*[@id=&quot;new-york&quot;]/div/div[2]/a(file:///C:/Users/Abel%20Esteban%20Ferrer/Desktop/TQS-P2---1603350-1598865-1677491---/src/test/java/features/reserva.feature:26)
+<td title='defaultPackage.Pagaments.runScenario()'><b>runScenario</b><br>Test class: defaultPackage.Pagaments<br>Test method: Runs Cucumber Scenarios<br>Parameters: "payment tour", "pagaments"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at steps.pagamentsSteps.iValidateTheBookingInfo(pagamentsSteps.java:83)
+	at ✽.I validate the general info aaaa, bbbbbbbb, a@aaa, 11223, aaaaaa, Pay Later(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:48)
+</pre></div><a href='#' onClick='toggleBox("stack-trace271002555", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace271002555'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at steps.pagamentsSteps.iValidateTheBookingInfo(pagamentsSteps.java:83)
+	at ✽.I validate the general info aaaa, bbbbbbbb, a@aaa, 11223, aaaaaa, Pay Later(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:48)
 </pre></div></td>
-<td>5</td>
-<td>defaultPackage.reservaTest@6b2ea799</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>42</td>
+<td>defaultPackage.Pagaments@543295b0</td></tr>
 <tr>
-<td title='defaultPackage.reservaTest.runScenario()'><b>runScenario</b><br>Test class: defaultPackage.reservaTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reserve a hotel", "reservaSteps"</td>
-<td></td>
-<td>4</td>
-<td>defaultPackage.reservaTest@6b2ea799</td></tr>
-<tr>
-<td title='defaultPackage.reservaTest.runScenario()'><b>runScenario</b><br>Test class: defaultPackage.reservaTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reserve a hotel", "reservaSteps"</td>
-<td></td>
-<td>3</td>
-<td>defaultPackage.reservaTest@6b2ea799</td></tr>
+<td title='defaultPackage.Pagaments.runScenario()'><b>runScenario</b><br>Test class: defaultPackage.Pagaments<br>Test method: Runs Cucumber Scenarios<br>Parameters: "paymet of an hotel", "pagaments"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at steps.pagamentsSteps.iValidateTheBookingInfo(pagamentsSteps.java:83)
+	at ✽.I validate the general info aaaa, bbbbbbbb, a@aaa, 11223, aaaaaa, Pay Later(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace100048427", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace100048427'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at steps.pagamentsSteps.iValidateTheBookingInfo(pagamentsSteps.java:83)
+	at ✽.I validate the general info aaaa, bbbbbbbb, a@aaa, 11223, aaaaaa, Pay Later(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:14)
+</pre></div></td>
+<td>17</td>
+<td>defaultPackage.Pagaments@543295b0</td></tr>
 </table><p>
 </body>
 </html>
