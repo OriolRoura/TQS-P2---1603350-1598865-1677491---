@@ -80,10 +80,11 @@ public class pagamentsSteps {
     	var = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/ul/li[5]")).getText();
     	Assert.assertTrue(var.contains(adress));
     	var = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[1]/strong[2]")).getText();
-    	Assert.assertTrue(var.contains(payment));
+    	Assert.assertTrue(payment.contains(var));
     	
     	    	
     }
+    
     @And("the user is in the flight payment page")
     public void theUserIsInTheFlightPaymentPage(){
     	driver.get("https://phptravels.net/flights"); 
@@ -141,5 +142,9 @@ public class pagamentsSteps {
 		TimeUnit.SECONDS.sleep(1);
     	String price = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[2]/div[2]/form/div/div[4]/strong/h4")).getText();
     	//Assert.assertTrue(price.contains(subGrup));
+	}
+	@And("close2")
+	public void close() {
+		driver.close();
 	}
 }

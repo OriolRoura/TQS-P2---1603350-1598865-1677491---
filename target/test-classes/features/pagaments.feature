@@ -12,7 +12,7 @@ Feature: pagaments
 		And chooses the payment <method>
 		And clicks the confirmation button
 		Then I validate the general info <name>, <lastname>, <email>, <phone>, <adress>, <payment>
-		And close
+		And close2
 		
 		Examples:
 			| name | lastname | email | phone | adress | method | payment |
@@ -28,7 +28,7 @@ Feature: pagaments
 		And clicks the confirmation button
 		Then I validate the general info <name>, <lastname>, <email>, <phone>, <adress>, <payment>
 		And I validate the flight info
-		And close
+		And close2
 			
 			
     Examples: 
@@ -46,7 +46,7 @@ Feature: pagaments
 		And chooses the payment <method>
 		And clicks the confirmation button
 		Then I validate the general info <name>, <lastname>, <email>, <phone>, <adress>, <payment>
-    And close
+    And close2
     
     Examples:
     	| name | lastname | email | phone | adress | method | payment |
