@@ -1,95 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-15T20:23:18 CET" name="Default suite" finished-at="2022-12-15T20:25:24 CET" duration-ms="125773">
+  <suite started-at="2022-12-17T13:36:37 CET" name="Default suite" finished-at="2022-12-17T13:37:58 CET" duration-ms="80581">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-12-15T20:23:18 CET" name="Default test" finished-at="2022-12-15T20:25:24 CET" duration-ms="125773">
-      <class name="defaultPackage.reservaTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:23:18 CET" name="setUpClass" finished-at="2022-12-15T20:23:18 CET" duration-ms="236" status="PASS">
+    <test started-at="2022-12-17T13:36:37 CET" name="Default test" finished-at="2022-12-17T13:37:58 CET" duration-ms="80581">
+      <class name="defaultPackage.Pagaments">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-17T13:36:37 CET" name="setUpClass" finished-at="2022-12-17T13:36:37 CET" duration-ms="248" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7186b202]]>
+                <![CDATA[org.testng.TestRunner@91f565d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:23:18 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-15T20:23:53 CET" duration-ms="34803" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-17T13:36:37 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-17T13:36:55 CET" duration-ms="17542" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Reserve a hotel"]]>
+                <![CDATA["paymet of an hotel"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["reservaSteps"]]>
+                <![CDATA["pagaments"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at steps.pagamentsSteps.iValidateTheBookingInfo(pagamentsSteps.java:83)
+at ✽.I validate the general info aaaa, bbbbbbbb, a@aaa, 11223, aaaaaa, Pay Later(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:23:53 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-15T20:24:25 CET" duration-ms="32332" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-17T13:36:55 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-17T13:37:15 CET" duration-ms="20305" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Reserve a hotel"]]>
+                <![CDATA["payment of a flight"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["reservaSteps"]]>
+                <![CDATA["pagaments"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at steps.pagamentsSteps.iValidateTheBookingInfo(pagamentsSteps.java:83)
+at ✽.I validate the general info aaaa, bbbbbbbb, a@aaa, 11223, aaaaaa, Pay Later(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:29)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:24:25 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-15T20:24:57 CET" duration-ms="31609" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-17T13:37:15 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-17T13:37:58 CET" duration-ms="42431" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Reserve a fly"]]>
+                <![CDATA["payment tour"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["reservaSteps"]]>
+                <![CDATA["pagaments"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at steps.pagamentsSteps.iValidateTheBookingInfo(pagamentsSteps.java:83)
+at ✽.I validate the general info aaaa, bbbbbbbb, a@aaa, 11223, aaaaaa, Pay Later(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:48)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:24:57 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-15T20:25:24 CET" duration-ms="26667" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Reserve a tour"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["reservaSteps"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:defaultPackage.reservaTest@563f38c4]" started-at="2022-12-15T20:25:24 CET" name="tearDownClass" finished-at="2022-12-15T20:25:24 CET" duration-ms="42" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-17T13:37:58 CET" name="tearDownClass" finished-at="2022-12-17T13:37:58 CET" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- defaultPackage.reservaTest -->
+      </class> <!-- defaultPackage.Pagaments -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

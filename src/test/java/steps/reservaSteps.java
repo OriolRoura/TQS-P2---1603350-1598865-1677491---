@@ -26,11 +26,12 @@ public class reservaSteps {
 	JavascriptExecutor executor;
 	
     @Given("the user log in")
-    public void theUserLogIn(){
+    public void theUserLogIn() throws InterruptedException{
     	System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
     	executor = (JavascriptExecutor)driver;
     	driver = new ChromeDriver();
     	driver.get("https://phptravels.net/login");
+    	TimeUnit.SECONDS.sleep(1);
     	driver.manage().window().setSize(new org.openqa.selenium.Dimension(1500, 1000));
     	String email = "agent@phptravels.com";
     	String password = "demoagent";
@@ -55,8 +56,8 @@ public class reservaSteps {
     
     
     @And("^the user chose the hotel (.*)")
-    public void theUserchoseTheRoom(String room) {
-    	driver.manage().timeouts().implicitlyWait(Duration.ofMillis(1000));
+    public void theUserchoseTheRoom(String room) throws InterruptedException {
+    	TimeUnit.SECONDS.sleep(1);
     	String titol = (room + "/div[1]/strong");
     	subGrup = driver.findElement(By.xpath(titol)).getText();
     	driver.findElement(By.xpath(room + "/div[2]/div/div[2]/form/div/div[5]/div/button")).sendKeys(Keys.RETURN);
@@ -72,39 +73,7 @@ public class reservaSteps {
     	Assert.assertTrue(room.contains(subGrup));
     }
     
-    @When("adds the hotel Travellers Information")
-    public void addsTheHotelTravellersInformation() {
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[2]/input")).sendKeys("aaa");
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div[1]/div[2]/div/div[3]/input")).sendKeys("aaa");
-        
-    }
-    @And("adds the personal information")
-    public void addsThePersonalInformation(){
-
-    }
-    
-    @And("chooses the payment method")
-    public void choosesThePaymentMethod() {
-    	
-    	
-    }
-    
-    @And("clicks the confirmation button")
-    public void clicksTheConfirmationButton() {
-    	executor = (JavascriptExecutor)driver;
-    	executor.executeScript("arguments[0].click()",driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[4]/div/div/div/label")));
-    	driver.findElement(By.id("booking")).sendKeys(Keys.RETURN);
-    
-    }
-    
-    @Then("I validate the booking info")
-    public void iValidateTheBookingInfo() throws InterruptedException {
-    	TimeUnit.SECONDS.sleep(1);
-    	String room = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[3]/div[3]/div[1]/div[2]/div/ul/li[1]")).getText();
-    	Assert.assertTrue(room.contains(subGrup));
-    	String hotel = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[3]/div[3]/div[1]/div[1]/div/div[2]/div/h5")).getText();
-    	Assert.assertTrue(hotel.contains(grup));
-    }
+   
     
     
     
@@ -143,33 +112,6 @@ public class reservaSteps {
     	Assert.assertTrue(flight.contains(subGrup));
     }
     
-	@When("adds the flight Travellers Information")
-	public void AddsTheFlightTravellersInformation() {
-		executor = (JavascriptExecutor)driver;
-		driver.findElement(By.name("lastname_1")).sendKeys("aaa");
-    	driver.findElement(By.name("firstname_1")).sendKeys("aaa");
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div/div[3]/select/option[3]")).click(); //year
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[1]/select/option[3]")).click(); //nationality
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div/div[1]/select/option[6]")).click(); //month
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/select/option[6]")).click(); //day
-    		
-    	//id
-    	
-    	driver.findElement(By.name("passport_1")).sendKeys("1133553");	
-    	
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[3]/div[2]/div/div[1]/select/option[4]")).click(); //month is
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[3]/div[3]/div/div[1]/select/option[6]")).click(); //month exp
-    	
-
-    }
-	@Then("I validate the flight info")
-	public void IValidateTheFlightInfo() throws InterruptedException{
-		TimeUnit.SECONDS.sleep(1);
-		String birth = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section/div/div/div/div/div[3]/div[3]/div[1]/div[2]/div/div[1]/ul/li[3]")).getText(); 
-    	String ID = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section/div/div/div/div/div[3]/div[3]/div[1]/div[2]/div/div[2]/ul/li[1]")).getText(); 
-    	Assert.assertTrue(birth.contains("06-05-2020"));
-    	Assert.assertTrue(ID.contains("1133553"));
-	}
 	
 	@And("the user is in the tour selection")
 	public void theUserIsInTheTourSelection(){
@@ -204,19 +146,7 @@ public class reservaSteps {
     	Assert.assertTrue(price.contains(subGrup));
 	}
 	
-	@When("adds the tour Travellers Information")
-	public void addsTheTourTravellersInformation(){
-		driver.findElement(By.name("lastname_1")).sendKeys("aaa");
-    	driver.findElement(By.name("firstname_1")).sendKeys("aaa");
-    	
-	}
 	
-	@Then("I validate the tour info")
-	public void IValidateTheTourInfo() throws InterruptedException{
-		TimeUnit.SECONDS.sleep(1);
-    	String price = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[2]/div[2]/form/div/div[4]/strong/h4")).getText();
-    	Assert.assertTrue(price.contains(subGrup));
-	}
 	@And("close")
 	public void close() {
 		driver.close();
