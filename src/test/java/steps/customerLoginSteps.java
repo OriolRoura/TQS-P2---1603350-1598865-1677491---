@@ -39,7 +39,7 @@ public class customerLoginSteps {
     	driver.findElement(By.partialLinkText(Type)).click();
     }
  
- @Then("the user Logs in")
+ @Then("the user Logs in right")
     public void theUserLogIn(String Email, String Password){
 		driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
         driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
@@ -66,12 +66,12 @@ public class customerLoginSteps {
    }
  
  @Then("the user Logs in wrong")
- public void theUserLogIn(String Email, String Password){
+ public void theUserLogInWrong(String Email, String Password){
 		driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
      driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
      driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[2]/div[2]/div/form/div[3]/button")).click();
      String expectedUrl= driver.getCurrentUrl();
-     String actualUrl="https://phptravels.net/login/failed;
+     String actualUrl="https://phptravels.net/login/failed";
      Assert.assertEquals(expectedUrl,actualUrl);
  	
 }
