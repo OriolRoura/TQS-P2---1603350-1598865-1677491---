@@ -21,6 +21,7 @@ import io.cucumber.java.en.When;
 public class modificarconfSteps {
 	WebDriver driver;
 	JavascriptExecutor executor;
+
 	
     @Given("Estic en la pagina")
     public void estic_en_la_pagina_correcte(){
@@ -33,15 +34,14 @@ public class modificarconfSteps {
     
     @When("Apreto idioma espanyol")
     public void apreto_idioma_espanyol(){
- 
-    	Select desplegable = new Select(driver.findElement(By.id("languajes")));
-    	desplegable.selectByValue("ru");
+    	driver.findElement(By.id("languages")).click();
+    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/header/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/ul/li[8]/a")).click();
     }
     
     @Then("Hauria de veure el idioma espanyol")
     public void veure_idioma_correcte(){
-    	
-    	throw new io.cucumber.java.PendingException();
+    	String language = driver.findElement(By.id("languages")).getText();
+    	Assert.assertTrue(language.contains("SPANISH")); 
     }
 
 

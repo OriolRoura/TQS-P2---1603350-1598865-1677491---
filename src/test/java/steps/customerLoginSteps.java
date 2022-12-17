@@ -20,7 +20,7 @@ public class customerLoginSteps {
 
 	WebDriver driver;
 	
- @Given("the user is in the index page")
+ @Given("the user is in the logIn page")
     public void theUserIsInTheIndexPage() {
     	System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
     	driver = new ChromeDriver();
@@ -37,7 +37,7 @@ public class customerLoginSteps {
     	driver.findElement(By.partialLinkText("Customer Login")).click();
     }
  
- @Then("the user log in")
+ @Then("the user logs in")
     public void theUserLogIn(){
 		driver.manage().window().maximize();
 		driver.findElement(By.cssSelector("input[name='email']")).sendKeys("user@phptravels.com");
@@ -48,7 +48,7 @@ public class customerLoginSteps {
         Assert.assertEquals(expectedUrl,actualUrl);
     }
     
- @When("the user clikcs the ACCOUNT button when logged")
+ @When("the user clikcs the ACCOUNT bbutton when logged")
     public void theUserClicksTheAccountButtonWhenLogged(){
 		driver.findElement(By.partialLinkText("ACCOUNT")).click();
     }
