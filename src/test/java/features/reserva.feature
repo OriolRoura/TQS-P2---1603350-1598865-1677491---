@@ -27,7 +27,7 @@ Feature: reservaSteps
 		Examples:
 			| company | trip |
 			| //*[@id="new-york"]/div/div[2]/a | //*[@id="data"]/ul/li[1]/div/form/div |
-	
+
 	@tag3
 		Scenario Outline: Reserve a tour
 			Given the user log in

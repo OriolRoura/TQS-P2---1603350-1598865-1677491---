@@ -80,7 +80,7 @@ public class pagamentsSteps {
     	var = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/ul/li[5]")).getText();
     	Assert.assertTrue(var.contains(adress));
     	var = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[1]/strong[2]")).getText();
-    	Assert.assertTrue(var.contains(adress));
+    	Assert.assertTrue(var.contains(payment));
     	
     	    	
     }
