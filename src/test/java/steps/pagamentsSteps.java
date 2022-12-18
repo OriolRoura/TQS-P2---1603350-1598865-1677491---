@@ -117,10 +117,10 @@ public class pagamentsSteps {
 	@Then("I validate the flight info")
 	public void IValidateTheFlightInfo() throws InterruptedException{
 		TimeUnit.SECONDS.sleep(1);
-		String birth = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section/div/div/div/div/div[3]/div[3]/div[1]/div[2]/div/div[1]/ul/li[3]")).getText(); 
-    	String ID = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section/div/div/div/div/div[3]/div[3]/div[1]/div[2]/div/div[2]/ul/li[1]")).getText(); 
-    	Assert.assertTrue(birth.contains("06-05-2020"));
-    	Assert.assertTrue(ID.contains("1133553"));
+		String all = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section/div/div/div/div/div[2]/div[3]/div[1]/div[2]/div")).getText(); 
+    	Assert.assertTrue(all.contains("06-05-2020"));
+    	Assert.assertTrue(all.contains("1133553"));
+    	Assert.assertTrue(all.contains("aaa"));
 	}
 	@And("the user is in the tour payment page")
 	public void theUserIsInTheTourPaymentPage(){
