@@ -39,7 +39,7 @@ public class customerLoginSteps {
     	driver.findElement(By.partialLinkText(Type)).click();
     }
  
- @Then("the user Logs in right")
+ @Then("the user Logs in")
     public void theUserLogIn(String Email, String Password){
 		driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
         driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
@@ -57,21 +57,23 @@ public class customerLoginSteps {
     
  @Then("we compare the account email to the one we submited")
     public void WeCompareTheAccountEmailToTheOneWeSubmited() {
-    	String expectedMail = "user@phptravels.com";
-    	String Mail = driver.findElement(By.name("email")).getTagName();
-    	Assert.assertEquals(expectedMail,Mail);
+    	String expectedUser = "";
+    	String User = driver.findElement(By.name("user")).getText();
+    	Assert.assertEquals(expectedUser,User);
     	
-    
-    
    }
+ @And("close")
+	public void close() {
+		driver.close();
+	}
  
  @Then("the user Logs in wrong")
- public void theUserLogInWrong(String Email, String Password){
+ public void theUserLogIn(String Email, String Password){
 		driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
      driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
      driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[2]/div[2]/div/form/div[3]/button")).click();
      String expectedUrl= driver.getCurrentUrl();
-     String actualUrl="https://phptravels.net/login/failed";
+     String actualUrl="https://phptravels.net/login/failed;
      Assert.assertEquals(expectedUrl,actualUrl);
  	
 }
