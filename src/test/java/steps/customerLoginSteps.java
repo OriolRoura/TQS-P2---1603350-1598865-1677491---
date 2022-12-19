@@ -17,7 +17,7 @@ import io.cucumber.java.en.When;
 
 
 public class customerLoginSteps {
-
+	
 	WebDriver driver;
 	
  @Given("the user is in the logIn page")
@@ -40,17 +40,19 @@ public class customerLoginSteps {
     }
  @And("^the user Logs in (.*),(.*)")
  public void the_user_logs_in_agent_phptravels_com_demoagent(String Email, String Password) throws InterruptedException{
-	 TimeUnit.SECONDS.sleep(1);
+	 
 	 for (String window : driver.getWindowHandles()) {
 			driver.switchTo().window(window);
 		}
+	 TimeUnit.SECONDS.sleep(1);
 	 driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
      driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
      driver.findElement(By.cssSelector("button[type='submit']")).click();
  }	
    
  @And("the user clikcs the MyProfile button")
-    public void theUserClicksTheMyProfileButton() {
+    public void theUserClicksTheMyProfileButton() throws InterruptedException {
+	 	TimeUnit.SECONDS.sleep(1);	
 	 	driver.findElement(By.id("dropdownMenuProfile")).click();
 	 	driver.findElement(By.xpath("/html/body/nav/div/div/div/div[3]/ul/li[1]/a")).click();
     	
@@ -74,23 +76,34 @@ public class customerLoginSteps {
  	String User = driver.findElement(By.xpath("//*[@id=\"layoutDrawer_content\"]/main/div/form/div/div/div/div/div[3]/div/div/div[2]/div/input")).getText();
  	//Assert.assertTrue(expectedUser.contains(User));
  	String expectedUrl= driver.getCurrentUrl();
-    String actualUrl="https://phptravels.net/api/supplier";
+    String actualUrl="https://phptravels.net/api/supplier/profile";
 	Assert.assertTrue(expectedUrl.equals(actualUrl));
-}
+}	
  
  @And("close")
 	public void close() {
 		driver.close();
 	}
  
- @Then("^the user Logs in wrong (.*),(.*)")
- public void theUserLogInWrong(String Email, String Password){
+ @Then("^the user fails LogIn (.*), (.*)")
+ public void theUserLogInWrong(String Email, String Password) throws InterruptedException{
+	 for (String window : driver.getWindowHandles()) {
+			driver.switchTo().window(window);
+		}
+	 TimeUnit.SECONDS.sleep(1);
 	 driver.findElement(By.name("email")).sendKeys(Email);
      driver.findElement(By.name("password")).sendKeys(Password);
-     driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[2]/div[2]/div/form/div[3]/button")).click();
      String expectedUrl= driver.getCurrentUrl();
-     String actualUrl="https://phptravels.net/login/failed";
-     Assert.assertEquals(expectedUrl,actualUrl);
+     if(expectedUrl.contains("https://phptravels.net/api/supplier")) {
+		 driver.findElement(By.cssSelector("button[type='submit']")).click();
+		 Assert.assertEquals(expectedUrl,driver.getCurrentUrl());
+	 }else {
+		 driver.findElement(By.cssSelector("button[type='submit']")).click();
+		 expectedUrl= driver.getCurrentUrl();
+	     String actualUrl="https://phptravels.net/login/failed";
+	     Assert.assertEquals(expectedUrl,actualUrl);
+	 }
+	 
  	
 }
 }
