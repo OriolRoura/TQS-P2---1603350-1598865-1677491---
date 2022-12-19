@@ -1,19 +1,19 @@
 Feature: Modificar configuracio web
-		@tag1
-		Scenario Outline: Steps Modificar configuracio
+		#@tag1
+		#Scenario Outline: Steps Modificar configuracio
 		
-		Given Estic en la pagina
-		When Apreto idioma <idioma> and <moneda>
-		Then Hauria de veure el idioma espanyol
-		And Entrar en la seccio de prova <seccio>, per tant estem en <urlQueTocaria>
-		And Close modificar
+		#Given Estic en la pagina
+		#When Apreto idioma <idioma> and <moneda>
+		#Then Hauria de veure el idioma espanyol
+		#And Close modificar
 		
-		Examples:
-		| idioma | moneda | seccio | urlQueTocaria |
-		| //*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/ul/li[8] | //*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[2]/div/ul/li[4]/a | //*[@id="tours-tab"] | //*[@id="tours-tab"] |
+		#Examples:
+		#| idioma | moneda | seccio | urlQueTocaria |
+		#| //*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/ul/li[8] | //*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[2]/div/ul/li[4] | //*[@id="tours-tab"] | //*[@id="tours-tab"] |
+
 		
 		  
-		@tag2
+		@tag1
 		Scenario Outline: Steps programar vuelo
 		
 		Given Estic en la pagina
@@ -24,6 +24,10 @@ Feature: Modificar configuracio web
 		
 		Examples:
 		| data | opcio |
+		|  //*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/ul/li[8] | /*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/ul/li[8] |
 		#|  |  |
-		#|  |  |
+		
+		#@tag3
+		#And Entrar en la seccio de prova <seccio>, per tant estem en <urlQueTocaria>
+		
 	

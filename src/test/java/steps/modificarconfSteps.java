@@ -38,7 +38,6 @@ public class modificarconfSteps {
     	driver.findElement(By.xpath(idioma)).click();
     	driver.findElement(By.id("currency")).click();
     	driver.findElement(By.xpath(moneda)).click();
-    		
     }
     
     @Then("Hauria de veure el idioma espanyol")
@@ -64,14 +63,16 @@ public class modificarconfSteps {
     
     
    
-	@When ("^Poso la data (.*)")
-	public void posar_data() 
+	@When ("^Poso la data (.*) ")
+	public void posar_data(String data) 
 	{
+		driver.findElement(By.id("flights-tab")).click();
 		/*depleguem calendari i posem 29 de desembre*/
 		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div[1]/div/div/input"))
 		.click();
 		driver.findElement(By.xpath("/html/body/div[11]/div[1]/table/tbody/tr[5]/td[5]")).click();
 	}
+	
 	@And ("Indico la resta de funcions del viatge")
 	public void indicar_valors_hotel()
 	{
