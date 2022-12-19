@@ -57,11 +57,21 @@ public class customerLoginSteps {
     
  @Then("we compare the account email to the one we submited")
     public void WeCompareTheAccountEmailToTheOneWeSubmited() {
-    	String expectedUser = "";
-    	String User = driver.findElement(By.name("user")).getText();
+    	String expectedUser = "Demo";
+    	String User = driver.findElement(By.xpath("/html/body/div[4]/div/div[2]/div/div[2]/h4/strong")).getText();
     	Assert.assertEquals(expectedUser,User);
     	
    }
+ @Then("we compare the account email to the one we submited supplier")
+ public void WeCompareTheAccountEmailToTheOneWeSubmited() {
+	driver.findElement(By.xpath("/html/body/nav/div/div/div/div[3]/button/i")).click()
+	driver.findElement(By.xpath("/html/body/nav/div/div/div/div[3]/ul/li[1]/a/div")).click()
+ 	String expectedUser = "Demo";
+ 	String User = driver.findElement(By.xpath("//*[@id=\"layoutDrawer_content\"]/main/div/form/div/div/div/div/div[3]/div/div/div[2]/div/input")).getText();
+ 	Assert.assertEquals(expectedUser,User);
+ 	
+}
+ 
  @And("close")
 	public void close() {
 		driver.close();
