@@ -28,18 +28,18 @@ public class customerLoginSteps {
     	driver.manage().window().maximize();
     }
  
- @When("the user clikcs the ACCOUNT button")
+ @When("^the user clikcs the ACCOUNT button")
     public void theUserClicksTheAccountButton() throws InterruptedException {
 	 	TimeUnit.SECONDS.sleep(1);
     	driver.findElement(By.id("ACCOUNT")).click();
     }
 
- @And("clicks the Customer Login button")
+ @And("^clicks the Customer Login button (.*)")
     public void theUserClicksTheLoginButton(String Type) {
     	driver.findElement(By.partialLinkText(Type)).click();
     }
  
- @Then("the user Logs in")
+ @Then("the user Logs in (.*)")
     public void theUserLogIn(String Email, String Password){
 		driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
         driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
@@ -63,7 +63,7 @@ public class customerLoginSteps {
     	
    }
  @Then("we compare the account email to the one we submited supplier")
- public void WeCompareTheAccountEmailToTheOneWeSubmited() {
+ public void WeCompareTheAccountEmailToTheOneWeSubmitedSupplier() {
 	driver.findElement(By.xpath("/html/body/nav/div/div/div/div[3]/button/i")).click()
 	driver.findElement(By.xpath("/html/body/nav/div/div/div/div[3]/ul/li[1]/a/div")).click()
  	String expectedUser = "Demo";
@@ -77,7 +77,7 @@ public class customerLoginSteps {
 		driver.close();
 	}
  
- @Then("the user Logs in wrong")
+ @Then("^the user Logs in wrong (.*)")
  public void theUserLogIn(String Email, String Password){
 		driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
      driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
