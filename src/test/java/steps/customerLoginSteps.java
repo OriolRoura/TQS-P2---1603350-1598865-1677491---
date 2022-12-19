@@ -77,7 +77,7 @@ public class customerLoginSteps {
 		driver.close();
 	}
  
- @Then("^the user Logs in wrong (.*)")
+ @Then("^the user Logs in wrong (.*)(.*)")
  public void theUserLogInWrong(String Email, String Password){
 		driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
      driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
