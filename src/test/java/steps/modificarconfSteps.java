@@ -34,6 +34,7 @@ public class modificarconfSteps {
     
     @When("^Apreto idioma (.*) and (.*)")
     public void apreto_idioma(String idioma, String moneda){
+    	
     	driver.findElement(By.id("languages")).click();
     	driver.findElement(By.xpath(idioma)).click();
     	driver.findElement(By.id("currency")).click();
@@ -71,7 +72,7 @@ public class modificarconfSteps {
 		data = null;
 		driver.findElement(By.id("flights-tab")).sendKeys(Keys.RETURN);
 		//depleguem calendari i posem 29 de desembre*/
-		driver.findElement(By.xpath(data)).click();
+		driver.findElement(By.id("departure")).click();
 		driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[12]/div[1]/table/tbody/tr[5]/td[5]")).click();
 	}
 	
@@ -80,21 +81,18 @@ public class modificarconfSteps {
 	{
 		/*Des de Barcelona, Fins Madrid*/
 		driver.findElement(By.xpath("//*[@id=\"onereturn\"]/div[1]/div/div[1]/div/div/div"));
-		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[1]/div/div[1]/div/div/div/input"))
-		.sendKeys("BCN - Barcelona - Barcelona");
-		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[1]/div/div[2]/div/div[2]/div/input"))
-		.sendKeys("MAD - Barajas - Madrid");
+		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[1]/div/div[1]/div/div/div/input")).sendKeys("BCN - Barcelona - Barcelona");
+		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[1]/div/div[2]/div/div[2]/div/input")).sendKeys("MAD - Barajas - Madrid");
 		/*Despleguem travelers i afegim un 2n adult*/
 		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[3]/div/div/div/a")).click();
-		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[3]/div/div/div/div/div[1]/div/div/div[2]/i")).click();
-		/*Busqueda*/
-		driver.findElement(By.id("submit")).click();
+		driver.findElement(By.xpath("//*[@id=\"onereturn\"]/div[3]/div/div/div/div/div[1]/div/div/div[2]/i")).click();	/*Busqueda*/
+		driver.findElement(By.id("flights-search")).click();
 		}
 	
-	@Then ("^Hauria de veure el vol (.*) com a primera opcio")
-	public void veure_vol_correcte(String volCorrecte) 
+	@Then ("Hauria de veure la URL")
+	public void veure_vol_correcte() 
 	{
-		
+		Assert.assertTrue(driver.getCurrentUrl().equals("https://phptravels.net/flights/en/usd/bcn/mad/oneway/economy/29-12-2022/2/0/0"));
 	}
     
     

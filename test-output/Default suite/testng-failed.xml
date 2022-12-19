@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="defaultPackage.customerLogin">
+      <class name="defaultPackage.modificarconfTest">
         <methods>
           <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
           <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="2 3 4 5 6 7"/>
         </methods>
-      </class> <!-- defaultPackage.customerLogin -->
+      </class> <!-- defaultPackage.modificarconfTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
