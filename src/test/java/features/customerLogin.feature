@@ -15,7 +15,7 @@ Examples:
 | Customer Login | user@phptravels.com | demouser | Елена |
 | Agents Login | agent@phptravels.com | demoagent | Demo |
 
-@tag2
+@tag1
 Scenario Outline: Make Login Supplier
 Given the user is in the logIn page
 When the user clikcs the ACCOUNT button
@@ -29,7 +29,7 @@ Examples:
 | Type | Email | Password |
 | Supplier Login | supplier@phptravels.com | demosupplier |
 
-@tag3
+@tag2
 Scenario Outline: Failed Login
 
 Given the user is in the logIn page

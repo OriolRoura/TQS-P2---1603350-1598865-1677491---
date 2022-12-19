@@ -76,6 +76,7 @@ public class customerLoginSteps {
  	String expectedUrl= driver.getCurrentUrl();
     String actualUrl="https://phptravels.net/api/supplier";
 	Assert.assertTrue(expectedUrl.equals(actualUrl));
+
 }
  
  @And("close")
