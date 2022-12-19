@@ -32,10 +32,11 @@ public class modificarconfSteps {
     	driver.manage().window().maximize();
     }
     
-    @When("Apreto idioma espanyol")
-    public void apreto_idioma_espanyol(){
-    	driver.findElement(By.id("languages")).click();
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/header/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/ul/li[8]/a")).click();
+    @When("^Apreto idioma (.*) and (.*)")
+    public void apreto_idioma(String idioma, String moneda){
+    	driver.findElement(By.xpath("//*[@id=\"languages\"]")).click();
+    	driver.findElement(By.xpath(moneda)).click();
+    	driver.findElement(By.xpath(idioma)).click();
     }
     
     @Then("Hauria de veure el idioma espanyol")
@@ -43,8 +44,53 @@ public class modificarconfSteps {
     	String language = driver.findElement(By.id("languages")).getText();
     	Assert.assertTrue(language.contains("SPANISH")); 
     }
-
-
-
-
+    
+	@And("^Entrar en la seccio de prova (.*), per tant estem en (.*)")
+	public void diferents_seccions(String seccio, String urlQueTocaria) {
+		driver.findElement(By.xpath(seccio)).click();
+		String urlActual = driver.getCurrentUrl();
+		String valor = driver.findElement(By.xpath("//*[@id=\"Tab\"]/li[3]")).getText();
+		System.out.print(valor);
+		Assert.assertEquals(urlActual, urlQueTocaria);
+	}
+    
+    @And("Close modificar")
+	public void close() {
+		driver.close();
+	}
+    
+    
+    
+   
+	@When ("^Poso la data (.*)")
+	public void posar_data() 
+	{
+		/*depleguem calendari i posem 29 de desembre*/
+		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div[1]/div/div/input"))
+		.click();
+		driver.findElement(By.xpath("/html/body/div[11]/div[1]/table/tbody/tr[5]/td[5]")).click();
+	}
+	@And ("Indico la resta de funcions del viatge")
+	public void indicar_valors_hotel()
+	{
+		/*Des de Barcelona, Fins Madrid*/
+		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[1]/div/div[1]/div/div/div/input"))
+		.sendKeys("BCN - Barcelona - Barcelona");
+		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[1]/div/div[2]/div/div[2]/div/input"))
+		.sendKeys("MAD - Barajas - Madrid");
+		/*Despleguem travelers i afegim un 2n adult*/
+		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[3]/div/div/div/a")).click();
+		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[3]/div/div/div/div/div[1]/div/div/div[2]/i")).click();
+		/*Busqueda*/
+		driver.findElement(By.id("submit")).click();
+		}
+	
+	@Then ("^Hauria de veure el vol (.*) com a primera opcio")
+	public void veure_vol_correcte(String volCorrecte) 
+	 {
+		
+	}
+    
+    
+    
 }
