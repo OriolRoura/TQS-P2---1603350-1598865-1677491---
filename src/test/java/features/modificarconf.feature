@@ -10,7 +10,7 @@ Feature: Modificar configuracio web
 		
 		Examples:
 		| idioma | moneda | seccio | urlQueTocaria |
-		| //*[@id="fadein"]/section[2]/div/div/div[2]/div/div/div/div[1]/div/div[8]/div | //*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[2]/div/ul/li[4]/a | //*[@id="tours-tab"] | //*[@id="tours-tab"] |
+		| //*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/ul/li[8] | //*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[2]/div/ul/li[4]/a | //*[@id="tours-tab"] | //*[@id="tours-tab"] |
 		
 		  
 		@tag2

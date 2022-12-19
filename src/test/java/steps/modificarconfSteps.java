@@ -34,9 +34,11 @@ public class modificarconfSteps {
     
     @When("^Apreto idioma (.*) and (.*)")
     public void apreto_idioma(String idioma, String moneda){
-    	driver.findElement(By.xpath("//*[@id=\"languages\"]")).click();
-    	driver.findElement(By.xpath(moneda)).click();
+    	driver.findElement(By.id("languages")).click();
     	driver.findElement(By.xpath(idioma)).click();
+    	driver.findElement(By.id("currency")).click();
+    	driver.findElement(By.xpath(moneda)).click();
+    		
     }
     
     @Then("Hauria de veure el idioma espanyol")
