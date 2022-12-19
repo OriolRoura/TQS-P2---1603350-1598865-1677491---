@@ -3,13 +3,12 @@ Feature: Moves
 @tag1
 Scenario Outline: Make moves and Logout
 
-Given the user is in the logIn page
-When the user clikcs the ACCOUNT button
-And clicks the Customer Login button <Type>
-And the user Logs in <Email>,<Password>
-And the user click different parts of webpage
-And the user Logout
-And close
+Given çthe user is in the logIn page
+When çthe user clikcs the ACCOUNT button
+And çclicks the Customer Login button <Type>
+And çthe user Logs in <Email>,<Password>
+And çthe user click different parts of webpage
+And çthe user Logout
 
 Examples: 
 | Type | Email | Password |

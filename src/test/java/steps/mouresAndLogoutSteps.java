@@ -20,26 +20,26 @@ public class mouresAndLogoutSteps {
 
 	WebDriver driver;
 	
- @Given("the user is in the logIn page")
-    public void theUserIsInTheIndexPage() {
+ @Given("çthe user is in the logIn page")
+    public void çtheUserIsInTheIndexPage() {
     	System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
     	driver = new ChromeDriver();
     	driver.get("https://phptravels.net/");
     	driver.manage().window().maximize();
     }
  
- @When("the user clikcs the ACCOUNT button")
-    public void theUserClicksTheAccountButton() throws InterruptedException {
+ @When("çthe user clikcs the ACCOUNT button")
+    public void çtheUserClicksTheAccountButton() throws InterruptedException {
 	 	TimeUnit.SECONDS.sleep(1);
     	driver.findElement(By.id("ACCOUNT")).click();
     }
 
- @And("^clicks the Customer Login button (.*)(.*)")
-    public void theUserClicksTheLoginButton(String Type) {
+ @And("^çclicks the Customer Login button (.*)(.*)")
+    public void çtheUserClicksTheLoginButton(String Type) {
     	driver.findElement(By.partialLinkText(Type)).click();
     }
- @And("^the user Logs in (.*),(.*)")
- public void the_user_logs_in_agent_phptravels_com_demoagent(String Email, String Password) throws InterruptedException{
+ @And("^ç2the user Logs in (.*),(.*)")
+ public void çthe_user_logs_in_agent_phptravels_com_demoagent(String Email, String Password) throws InterruptedException{
 	 TimeUnit.SECONDS.sleep(1);
 	 for (String window : driver.getWindowHandles()) {
 			driver.switchTo().window(window);
@@ -52,18 +52,19 @@ public class mouresAndLogoutSteps {
      //Assert.assertTrue(expectedUrl.equals(actualUrl));
  }	
 
- @And("the user click different parts of webpage")
-    public void theUserClicksTheMyProfileButton() {
+ @And("çthe user click different parts of webpage")
+    public void çtheUserClicksTheMyProfileButton() {
     	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[2]")).click();    
     	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[4]")).click(); 
     	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[3]")).click();    	
 
     }
  
- @And("the user Logout")
- 	public void the_user_Logout() {
+ @And("çthe user Logout")
+ 	public void çthe_user_Logout() {
 	 	driver.findElement(By.id("currency")).click();
-	 	driver.findElement(By.xpath("//*[@id=\"fadein\"]/header/div/div/div/div/div/div[2]/div/div[2]/div[3]/div/ul/li[5]/a"));
-
+	 	driver.findElement(By.xpath("//*[@id=\"fadein\"]/header/div/div/div/div/div/div[2]/div/div[2]/div[3]/div/ul/li[5]"));
+	 	String current = driver.getCurrentUrl();
+	 	Assert.assertEquals("https://phptravels.net/login", current);
  	}
 }
