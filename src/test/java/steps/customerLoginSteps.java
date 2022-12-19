@@ -25,49 +25,56 @@ public class customerLoginSteps {
     	System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
     	driver = new ChromeDriver();
     	driver.get("https://phptravels.net/");
+    	driver.manage().window().maximize();
     }
  
  @When("the user clikcs the ACCOUNT button")
-    public void theUserClicksTheAccountButton() {
-    	driver.findElement(By.partialLinkText("ACCOUNT")).click();
+    public void theUserClicksTheAccountButton() throws InterruptedException {
+	 	TimeUnit.SECONDS.sleep(1);
+    	driver.findElement(By.id("ACCOUNT")).click();
     }
 
- @And("the user clikcs the Customer Login button ")
-    public void theUserClicksTheLoginButton() {
-    	driver.findElement(By.partialLinkText("Customer Login")).click();
+ @And("clicks the Customer Login button")
+    public void theUserClicksTheLoginButton(String Type) {
+    	driver.findElement(By.partialLinkText(Type)).click();
     }
  
- @Then("the user logs in")
-    public void theUserLogIn(){
-		driver.manage().window().maximize();
-		driver.findElement(By.cssSelector("input[name='email']")).sendKeys("user@phptravels.com");
-        driver.findElement(By.cssSelector("input[name='password']")).sendKeys("demouser");
+ @Then("the user Logs in")
+    public void theUserLogIn(String Email, String Password){
+		driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
+        driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
         driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[2]/div[2]/div/form/div[3]/button")).click();
         String expectedUrl= driver.getCurrentUrl();
         String actualUrl="https://phptravels.net/account/dashboard";
         Assert.assertEquals(expectedUrl,actualUrl);
     }
-    
- @When("the user clikcs the ACCOUNT bbutton when logged")
-    public void theUserClicksTheAccountButtonWhenLogged(){
-		driver.findElement(By.partialLinkText("ACCOUNT")).click();
-    }
-
- @And("the user clikcs the MyProfile button ")
+   
+ @When("the user clikcs the MyProfile button")
     public void theUserClicksTheMyProfileButton() {
-    	driver.findElement(By.partialLinkText("My Profile")).click();
-    	String expectedMail = "user@phptravels.com";
-    	String Mail = driver.findElement(By.cssSelector("input[name='email']")).getText();
-    	Assert.assertEquals(expectedMail,Mail);
+    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[4]/a")).click();
     	
     }
     
- @Then("We compare the account email to the one we submited")
+ @Then("we compare the account email to the one we submited")
     public void WeCompareTheAccountEmailToTheOneWeSubmited() {
-    	String expectedMail = "user@phptravels.com";
-    	String Mail = driver.findElement(By.cssSelector("input[name='email']")).getText();
-    	Assert.assertEquals(expectedMail,Mail);
+    	String expectedUser = "";
+    	String User = driver.findElement(By.name("user")).getText();
+    	Assert.assertEquals(expectedUser,User);
     	
-    }
-    
    }
+ @And("close")
+	public void close() {
+		driver.close();
+	}
+ 
+ @Then("the user Logs in wrong")
+ public void theUserLogIn(String Email, String Password){
+		driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
+     driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
+     driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[2]/div[2]/div/form/div[3]/button")).click();
+     String expectedUrl= driver.getCurrentUrl();
+     String actualUrl="https://phptravels.net/login/failed;
+     Assert.assertEquals(expectedUrl,actualUrl);
+ 	
+}
+}
