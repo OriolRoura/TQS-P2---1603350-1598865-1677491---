@@ -55,9 +55,11 @@ public class mouresAndLogoutSteps {
  @And("the user click different parts of webpage")
     public void theUserClicksTheMyProfileButton() {
     	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[2]")).click();    
+    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[4]")).click(); 
     	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[3]")).click();    	
 
     }
+ 
  @And("the user Logout")
  	public void the_user_Logout() {
 	 	driver.findElement(By.id("currency")).click();
