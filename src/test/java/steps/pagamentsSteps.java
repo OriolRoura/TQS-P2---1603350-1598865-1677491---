@@ -22,9 +22,10 @@ public class pagamentsSteps {
 	@Given("page is started")
 	public void thePageIsStarted() {
 		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
-    	executor = (JavascriptExecutor)driver;
-    	driver = new ChromeDriver();
-	}
+		driver = new ChromeDriver();
+		executor = (JavascriptExecutor)driver;
+    	
+    		}
 	
 	@And("the user is in the hotel payment page")
 	public void theUserIsInTheHotelPaymentPage(){
@@ -49,18 +50,14 @@ public class pagamentsSteps {
     	driver.findElement(By.name("address")).sendKeys(adress);
     	
     }
-    
+
     @And("^chooses the payment (.*)")
     public void choosesThePaymentMethod(String method) {
-    	JavascriptExecutor executor;
-    	executor = (JavascriptExecutor)driver;
-    	executor.executeScript(method,driver.findElement(By.xpath("//*[@id=\"myTab\"]/label/label/label/label/label")));
-    	
+    	executor.executeScript("arguments[0].click()",driver.findElement(By.xpath(method)));
     }
     
     @And("clicks the confirmation button")
     public void clicksTheConfirmationButton() {
-    	executor = (JavascriptExecutor)driver;
     	executor.executeScript("arguments[0].click()",driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[4]/div/div/div/label")));
     	driver.findElement(By.id("booking")).sendKeys(Keys.RETURN);
     
@@ -68,16 +65,12 @@ public class pagamentsSteps {
     
     @Then("^I validate the general info (.*),(.*),(.*),(.*),(.*),(.*)")
     public void iValidateTheBookingInfo(String name,String lastname,String email,String phone,String adress, String payment) throws InterruptedException {
-    	TimeUnit.SECONDS.sleep(1);
-    	String var = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/ul/li[1]")).getText();
+    	TimeUnit.SECONDS.sleep(1);					
+    	String var = driver.findElement(By.className("col-md-6")).getText();
     	Assert.assertTrue(var.contains(name));
-    	var = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/ul/li[2]")).getText();
     	Assert.assertTrue(var.contains(lastname));
-    	var = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/ul/li[3]")).getText();
     	Assert.assertTrue(var.contains(email));
-    	var = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/ul/li[4]")).getText();
     	Assert.assertTrue(var.contains(phone));
-    	var = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/ul/li[5]")).getText();
     	Assert.assertTrue(var.contains(adress));
     	var = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[1]/strong[2]")).getText();
     	Assert.assertTrue(payment.contains(var));
@@ -95,15 +88,12 @@ public class pagamentsSteps {
     
     @When("adds the flight Travellers Information")
 	public void AddsTheFlightTravellersInformation() {
-		executor = (JavascriptExecutor)driver;
 		driver.findElement(By.name("lastname_1")).sendKeys("aaa");
     	driver.findElement(By.name("firstname_1")).sendKeys("aaa");
     	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div/div[3]/select/option[3]")).click(); //year
     	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[1]/select/option[3]")).click(); //nationality
     	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div/div[1]/select/option[6]")).click(); //month
     	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/select/option[6]")).click(); //day
-    		
-    	//id
     	
     	driver.findElement(By.name("passport_1")).sendKeys("1133553");	
     	
@@ -137,14 +127,22 @@ public class pagamentsSteps {
     	
 	}
 	
-	@Then("I validate the tour info")
-	public void IValidateTheTourInfo() throws InterruptedException{
-		TimeUnit.SECONDS.sleep(1);
-    	String price = driver.findElement(By.xpath("//*[@id=\"fadein\"]/section[1]/div/div/div/div/div[2]/div[2]/form/div/div[4]/strong/h4")).getText();
-    	//Assert.assertTrue(price.contains(subGrup));
-	}
 	@And("close2")
 	public void close() {
 		driver.close();
 	}
+	
+	@Then("validate empty cage")
+	public void validateNameError() {
+		Assert.assertTrue(driver.getCurrentUrl().equals("https://phptravels.net/hotels/booking"));
+	}
+	@Then("validate email error")
+	public void validateEmailError() {
+		Assert.assertTrue(driver.getCurrentUrl().equals("https://phptravels.net/flights/booking"));
+		
+	}
+
+	
+	
+	
 }

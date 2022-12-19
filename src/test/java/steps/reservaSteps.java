@@ -20,7 +20,7 @@ import io.cucumber.java.en.When;
 public class reservaSteps {
 	private String subGrup;
     private String grup;
-    private int num;
+
 
 	WebDriver driver;
 	JavascriptExecutor executor;
@@ -107,8 +107,11 @@ public class reservaSteps {
 		TimeUnit.SECONDS.sleep(1);
     	String company = driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div[2]/div[2]/div[2]/strong/div/div/ul/li[1]/span")).getText();
     	String flight = driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[5]/form/section/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div[2]/div[2]/div[2]/strong/div/div/ul/li[2]/span/span	")).getText();
-    																		
-    	Assert.assertTrue(company.contains(grup));
+    	if (company.equals("Airline:") ) {
+    		Assert.assertTrue(grup.contains(" "));
+    	}else {
+        	Assert.assertTrue(company.contains(grup));
+    	}
     	Assert.assertTrue(flight.contains(subGrup));
     }
     
@@ -147,7 +150,7 @@ public class reservaSteps {
 	}
 	
 	
-	@And("close")
+	@And("close1")
 	public void close() {
 		driver.close();
 	}

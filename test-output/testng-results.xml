@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-17T20:35:27 CET" name="Default suite" finished-at="2022-12-17T20:39:18 CET" duration-ms="230652">
+  <suite started-at="2022-12-19T15:25:58 CET" name="Default suite" finished-at="2022-12-19T15:29:52 CET" duration-ms="233976">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-12-17T20:35:27 CET" name="Default test" finished-at="2022-12-17T20:39:18 CET" duration-ms="230652">
+    <test started-at="2022-12-19T15:25:58 CET" name="Default test" finished-at="2022-12-19T15:29:52 CET" duration-ms="233976">
       <class name="defaultPackage.Pagaments">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-17T20:35:28 CET" name="setUpClass" finished-at="2022-12-17T20:35:28 CET" duration-ms="215" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:25:58 CET" name="setUpClass" finished-at="2022-12-19T15:25:58 CET" duration-ms="257" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2c05ff9d]]>
+                <![CDATA[org.testng.TestRunner@184de357]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-17T20:35:28 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-17T20:36:28 CET" duration-ms="60183" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:25:58 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:26:28 CET" duration-ms="29448" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,33 +34,90 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to find element with locator By.xpath: //*[@id="fadein"]/section[2]/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/h6/a
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.5.3', revision: '4b786a1e430'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //*[@id="fadein"]/section[2]/div/div/div[2]/div/div/div/div[1]/div/div[7]/div/div[2]/h6/a
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.5.3', revision: '4b786a1e430'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at steps.pagamentsSteps.theUserIsInTheHotelPaymentPage(pagamentsSteps.java:32)
-at ✽.the user is in the hotel payment page(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:9)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-17T20:36:28 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-17T20:37:53 CET" duration-ms="85216" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:26:28 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:26:57 CET" duration-ms="29417" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["paymet of an hotel"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["pagaments"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:26:57 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:27:26 CET" duration-ms="29251" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["paymet of an hotel"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["pagaments"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:27:26 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:27:40 CET" duration-ms="13885" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["paymet of an hotel"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["pagaments"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:27:40 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:28:09 CET" duration-ms="28906" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["paymet of an hotel"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["pagaments"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:28:09 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:28:23 CET" duration-ms="14342" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["paymet of an hotel"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["pagaments"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:28:23 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:28:57 CET" duration-ms="33367" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -73,48 +130,10 @@ at ✽.the user is in the hotel payment page(file:///C:/Users/Oriol/eclipse-work
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: net::ERR_CONNECTION_TIMED_OUT
-  (Session info: chrome=108.0.5359.99)
-Build info: version: '4.5.3', revision: '4b786a1e430'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b19932e6b2b819ba276da68d9fa6555f, get {url=https://phptravels.net/flights}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Oriol\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55148}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55148/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b19932e6b2b819ba276da68d9fa6555f]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_TIMED_OUT
-  (Session info: chrome=108.0.5359.99)
-Build info: version: '4.5.3', revision: '4b786a1e430'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b19932e6b2b819ba276da68d9fa6555f, get {url=https://phptravels.net/flights}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Oriol\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55148}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55148/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b19932e6b2b819ba276da68d9fa6555f
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-at steps.pagamentsSteps.theUserIsInTheFlightPaymentPage(pagamentsSteps.java:90)
-at ✽.the user is in the flight payment page(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:24)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-17T20:37:53 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-17T20:39:18 CET" duration-ms="84980" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:28:57 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:29:31 CET" duration-ms="33720" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -127,48 +146,58 @@ at ✽.the user is in the flight payment page(file:///C:/Users/Oriol/eclipse-wor
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: net::ERR_CONNECTION_TIMED_OUT
-  (Session info: chrome=108.0.5359.99)
-Build info: version: '4.5.3', revision: '4b786a1e430'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e5b8fe4fbd5f260eed45d90b87e9a5cc, get {url=https://phptravels.net/tours}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Oriol\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55288}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55288/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e5b8fe4fbd5f260eed45d90b87e9a5cc]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_TIMED_OUT
-  (Session info: chrome=108.0.5359.99)
-Build info: version: '4.5.3', revision: '4b786a1e430'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e5b8fe4fbd5f260eed45d90b87e9a5cc, get {url=https://phptravels.net/tours}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Oriol\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55288}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55288/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: e5b8fe4fbd5f260eed45d90b87e9a5cc
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-at steps.pagamentsSteps.theUserIsInTheTourPaymentPage(pagamentsSteps.java:127)
-at ✽.the user is in the tour payment page(file:///C:/Users/Oriol/eclipse-workspace/TQS-P2/src/test/java/features/pagaments.feature:43)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-17T20:39:18 CET" name="tearDownClass" finished-at="2022-12-17T20:39:18 CET" duration-ms="8" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:29:31 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:29:36 CET" duration-ms="5639" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["paymet without some values"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["pagaments"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:29:36 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:29:44 CET" duration-ms="7314" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["paymet without some values"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["pagaments"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:29:44 CET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-19T15:29:52 CET" duration-ms="8347" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["payment with bad email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["pagaments"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:defaultPackage.Pagaments@543295b0]" started-at="2022-12-19T15:29:52 CET" name="tearDownClass" finished-at="2022-12-19T15:29:52 CET" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
