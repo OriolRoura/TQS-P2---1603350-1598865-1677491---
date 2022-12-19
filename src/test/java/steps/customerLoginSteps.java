@@ -34,7 +34,7 @@ public class customerLoginSteps {
     	driver.findElement(By.id("ACCOUNT")).click();
     }
 
- @And("^clicks the Customer Login button (.*)")
+ @And("^clicks the Customer Login button (.*)(.*)")
     public void theUserClicksTheLoginButton(String Type) {
     	driver.findElement(By.partialLinkText(Type)).click();
     }

@@ -24,8 +24,7 @@ Feature: Modificar configuracio web
 		
 		Examples:
 		| data | opcio |
-		|  //*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/ul/li[8] | /*[@id="fadein"]/header/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/ul/li[8] |
-		#|  |  |
+		|  /html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div[1]/div/div/input | |
 		
 		#@tag3
 		#And Entrar en la seccio de prova <seccio>, per tant estem en <urlQueTocaria>

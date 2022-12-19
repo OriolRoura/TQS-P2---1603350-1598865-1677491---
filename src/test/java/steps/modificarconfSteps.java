@@ -41,9 +41,11 @@ public class modificarconfSteps {
     }
     
     @Then("Hauria de veure el idioma espanyol")
-    public void veure_idioma_correcte(){
+    public void veure_idioma_i_moneda_correcte(){
     	String language = driver.findElement(By.id("languages")).getText();
-    	Assert.assertTrue(language.contains("SPANISH")); 
+    	Assert.assertTrue(language.contains("SPANISH"));
+    	String moneda = driver.findElement(By.id("currency")).getText();
+    	Assert.assertTrue(moneda.contains("EUR"));
     }
     
 	@And("^Entrar en la seccio de prova (.*), per tant estem en (.*)")
@@ -66,16 +68,18 @@ public class modificarconfSteps {
 	@When ("^Poso la data (.*)")
 	public void posar_data(String data) 
 	{
-		driver.findElement(By.id("flights-tab")).click();
-		/*depleguem calendari i posem 29 de desembre*/
-		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div[1]/div/div/input")).click();
-		driver.findElement(By.xpath("/html/body/div[11]/div[1]/table/tbody/tr[5]/td[5]")).click();
+		data = null;
+		driver.findElement(By.id("flights-tab")).sendKeys(Keys.RETURN);
+		//depleguem calendari i posem 29 de desembre*/
+		driver.findElement(By.xpath(data)).click();
+		driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[12]/div[1]/table/tbody/tr[5]/td[5]")).click();
 	}
 	
-	@And ("Indico la resta de funcions del viatge")
+	@And("Indico la resta de funcions del viatge")
 	public void indicar_valors_hotel()
 	{
 		/*Des de Barcelona, Fins Madrid*/
+		driver.findElement(By.xpath("//*[@id=\"onereturn\"]/div[1]/div/div[1]/div/div/div"));
 		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[1]/div/div[1]/div/div/div/input"))
 		.sendKeys("BCN - Barcelona - Barcelona");
 		driver.findElement(By.xpath("/html/body/section[1]/div/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div[1]/div/div[2]/div/div[2]/div/input"))
@@ -89,7 +93,7 @@ public class modificarconfSteps {
 	
 	@Then ("^Hauria de veure el vol (.*) com a primera opcio")
 	public void veure_vol_correcte(String volCorrecte) 
-	 {
+	{
 		
 	}
     
