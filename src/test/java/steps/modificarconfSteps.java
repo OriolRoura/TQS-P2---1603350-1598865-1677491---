@@ -68,6 +68,7 @@ public class modificarconfSteps {
 	@When ("^Poso la data (.*)")
 	public void posar_data(String data) 
 	{
+		data = null;
 		driver.findElement(By.id("flights-tab")).sendKeys(Keys.RETURN);
 		//depleguem calendari i posem 29 de desembre*/
 		driver.findElement(By.xpath(data)).click();
