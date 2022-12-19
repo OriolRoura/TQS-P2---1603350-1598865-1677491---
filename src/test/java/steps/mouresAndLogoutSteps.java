@@ -34,11 +34,11 @@ public class mouresAndLogoutSteps {
     	driver.findElement(By.id("ACCOUNT")).click();
     }
 
- @And("^çclicks the Customer Login button (.*)(.*)")
+ @And("^çclicks the Customer Login button (.*)")
     public void çtheUserClicksTheLoginButton(String Type) {
     	driver.findElement(By.partialLinkText(Type)).click();
     }
- @And("^ç2the user Logs in (.*),(.*)")
+ @And("^çthe user Logs in (.*),(.*)")
  public void çthe_user_logs_in_agent_phptravels_com_demoagent(String Email, String Password) throws InterruptedException{
 	 TimeUnit.SECONDS.sleep(1);
 	 for (String window : driver.getWindowHandles()) {
@@ -55,15 +55,21 @@ public class mouresAndLogoutSteps {
  @And("çthe user click different parts of webpage")
     public void çtheUserClicksTheMyProfileButton() {
     	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[2]")).click();    
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[4]")).click(); 
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[3]")).click();    	
-
+    	String current = driver.getCurrentUrl();
+    	Assert.assertTrue("https://phptravels.net/account/bookings".equals(current));
+    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[4]")).click();
+    	current = driver.getCurrentUrl();
+    	Assert.assertTrue("https://phptravels.net/account/profile".equals(current));
+    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[3]")).click();
+    	current = driver.getCurrentUrl();
+    	Assert.assertTrue("https://phptravels.net/account/add_funds".equals(current));
+    	
     }
  
  @And("çthe user Logout")
  	public void çthe_user_Logout() {
-	 	driver.findElement(By.id("currency")).click();
-	 	driver.findElement(By.xpath("//*[@id=\"fadein\"]/header/div/div/div/div/div/div[2]/div/div[2]/div[3]/div/ul/li[5]"));
+	 	driver.findElement(By.xpath("/html/body/header/div/div/div/div/div/div[2]/div/div[2]/div[3]/div/button")).click();
+	 	driver.findElement(By.xpath("//*[@id=\"fadein\"]/header/div/div/div/div/div/div[2]/div/div[2]/div[3]/div/ul/li[5]")).click()	;
 	 	String current = driver.getCurrentUrl();
 	 	Assert.assertEquals("https://phptravels.net/login", current);
  	}

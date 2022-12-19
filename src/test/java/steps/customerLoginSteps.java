@@ -80,7 +80,7 @@ public class customerLoginSteps {
 	Assert.assertTrue(expectedUrl.equals(actualUrl));
 }	
  
- @And("close")
+ @And("close3")
 	public void close() {
 		driver.close();
 	}

@@ -7,7 +7,7 @@ When the user clikcs the ACCOUNT button
 And clicks the Customer Login button <Type>
 And the user Logs in <Email>,<Password>
 Then we compare the <user> email to the one we submited
-And close
+And close3
 
 Examples: 
 | Type | Email | Password | user |
@@ -23,7 +23,7 @@ And clicks the Customer Login button <Type>
 And the user Logs in <Email>,<Password>
 And the user clikcs the MyProfile button 
 Then we compare the account email to the one we submited supplier
-And close
+And close3
 
 Examples:
 | Type | Email | Password |
@@ -37,7 +37,7 @@ Given the user is in the logIn page
 When the user clikcs the ACCOUNT button
 And clicks the Customer Login button <Type>
 Then the user fails LogIn <Email>, <Password>
-And close
+And close3
 
 Examples: 
 | Type | Email | Password |
