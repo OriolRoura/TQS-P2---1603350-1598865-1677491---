@@ -78,7 +78,7 @@ public class customerLoginSteps {
 	}
  
  @Then("^the user Logs in wrong (.*)")
- public void theUserLogIn(String Email, String Password){
+ public void theUserLogInWrong(String Email, String Password){
 		driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
      driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
      driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[2]/div[2]/div/form/div[3]/button")).click();
