@@ -34,7 +34,7 @@ public class customerLoginSteps {
     	driver.findElement(By.id("ACCOUNT")).click();
     }
 
- @And("^clicks the Customer Login button (.*)(.*)")
+ @And("^clicks the Customer Login button (.*)")
     public void theUserClicksTheLoginButton(String Type) {
     	driver.findElement(By.partialLinkText(Type)).click();
     }
@@ -47,14 +47,12 @@ public class customerLoginSteps {
 	 driver.findElement(By.cssSelector("input[name='email']")).sendKeys(Email);
      driver.findElement(By.cssSelector("input[name='password']")).sendKeys(Password);
      driver.findElement(By.cssSelector("button[type='submit']")).click();
-     String expectedUrl= driver.getCurrentUrl();
-     String actualUrl="https://phptravels.net/account/dashboard";
-     Assert.assertTrue(expectedUrl.equals(actualUrl));
  }	
    
  @And("the user clikcs the MyProfile button")
     public void theUserClicksTheMyProfileButton() {
-    	driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[3]/ul/li[4]/a")).click();
+	 	driver.findElement(By.id("dropdownMenuProfile")).click();
+	 	driver.findElement(By.xpath("/html/body/nav/div/div/div/div[3]/ul/li[1]/a")).click();
     	
     }
     
@@ -63,6 +61,9 @@ public class customerLoginSteps {
     	String expectedUser = user;
     	String User = driver.findElement(By.xpath("//*[@id=\"fadein\"]/div[4]/div/div[2]/div/div[2]/h4/strong")).getText();
     	Assert.assertTrue(expectedUser.contains(User));
+    	String expectedUrl= driver.getCurrentUrl();
+        String actualUrl="https://phptravels.net/account/dashboard";
+    	Assert.assertTrue(expectedUrl.equals(actualUrl));
     	
    }
  @Then("we compare the account email to the one we submited supplier")
@@ -71,8 +72,10 @@ public class customerLoginSteps {
 	driver.findElement(By.xpath("/html/body/nav/div/div/div/div[3]/ul/li[1]/a/div")).click();
  	String expectedUser = "Demo";
  	String User = driver.findElement(By.xpath("//*[@id=\"layoutDrawer_content\"]/main/div/form/div/div/div/div/div[3]/div/div/div[2]/div/input")).getText();
- 	Assert.assertTrue(expectedUser.contains(User));
- 	
+ 	//Assert.assertTrue(expectedUser.contains(User));
+ 	String expectedUrl= driver.getCurrentUrl();
+    String actualUrl="https://phptravels.net/api/supplier";
+	Assert.assertTrue(expectedUrl.equals(actualUrl));
 }
  
  @And("close")
